@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+    border-bottom: 4px dotted black;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+div{
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+}
+
+a:hover {
+    color: aqua;
+}
