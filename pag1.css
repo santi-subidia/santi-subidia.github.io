@@ -1,3 +1,13 @@
+body {
+    background-color: rgb(34, 40, 49);
+    font-family: Verdana;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(rgba(34, 40, 49, 0.75), rgba(34, 40, 49, 0.75)), url(img1/bandera-argentina.webp) no-repeat center center fixed;
+    background-size: cover;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -6,43 +16,56 @@ nav {
     padding-left: 5%;
     padding-right: 5%;
     font-weight: bold;
-    border-bottom: 4px dotted black;
-}
-body{
-    background-color: #566573; 
+    border-bottom: 4px solid rgb(0, 173, 181);
 }
 
-
-#title {
+#logo {
     width: 100px;
     height: 100px;
+    padding-bottom: 25px;
 }
 
-div{
+#titulo{
+    color: rgb(238, 238, 238);
+}
+
+#menu{
     display: flex;
     justify-content: space-between;
 }
 
 a {
-    color: black;
+    color: rgb(238, 238, 238);
     text-decoration: none;
     padding: 20px;
 }
 
 a:hover {
-    color: rgb(207, 210, 216);
+    color: rgb(0, 173, 181);
 }
-p {
-    line-height: 1.4;
-    font-size: 18px;
-    max-width: 800px;
-    text-indent: 20px;
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
-    text-align:left;
-  }
-  #Fangio{
- width: 100px;
- height: 100px;
-  }
-    
+
+#contenedor {
+    display: flex;
+    flex-wrap: wrap; /* Asegura que las columnas se mantengan en una sola fila */
+    justify-content: space-between; /* Espacio entre columnas */
+    padding: 30px;
+}
+
+.pilotos{
+    flex: 0 0 50%; /* Hace que cada columna ocupe el 49% del ancho del contenedor */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 4px Dotted rgb(0, 173, 181);
+    border-radius: 100px;
+    text-align: center;
+}
+
+
+p,h2,h3 {
+    color: rgb(238, 238, 238);
+}
+
+.imgPiloto{
+    width: 200px;
+    height: 200px;
+}
