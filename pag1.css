@@ -69,3 +69,10 @@ p,h2,h3 {
     width: 200px;
     height: 200px;
 }
+
+#carrusel {
+    display: flex;
+    justify-content: center;
+}
+
+
