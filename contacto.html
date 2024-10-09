@@ -18,18 +18,35 @@
             </div>
         </nav>
     </header>
-    <div>
-        <form action="">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" placeholder="Nombre">
+    <div class="principal">
+        <div class="conteiner">
+            <form class="formulario">
+                <h2>Formulario de Contacto</h2>
+                <div id="conteinerInput">
+                    <label for="nombre">Nombre</label>
+                    <input id="name" type="text" name="nombre" placeholder="Nombre">
 
-            <label for="gmail">Gmail</label>
-            <input type="text" name="gmail" placeholder="Gmail">
+                    <label for="gmail">Gmail</label>
+                    <input id="email" type="email" name="email" placeholder="Email">
 
-            <label for="telefono">Telefeno</label>
-            <input type="text" name="telefono" placeholder="Telefeno">
-        </form>
+                    <label for="telefono">Telefeno</label>
+                    <input id="telefono" type="tel" name="telefono" placeholder="Telefeno">
+
+                    <input id="boton" type="submit" value="Enviar">
+
+                    <!-- <input type="hidden" name="_next" value="">
+                    <input type="hidden" name="_captcha" value="false"> -->
+                </div>
+            </form>
+        </div>
+
+        <div class="conteinerResult">
+            <h2>Datos Ingresados</h2>
+            <p><strong>Nombre:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Telefeno:</strong> <span id="displayTelefono"></span></p>
+        </div>
     </div>
-    
+    <script src="contacto.js"></script>
 </body>
 </html>

@@ -25,11 +25,11 @@ nav {
     padding-bottom: 25px;
 }
 
-#titulo{
+#titulo {
     color: rgb(238, 238, 238);
 }
 
-#menu{
+#menu {
     display: flex;
     justify-content: space-between;
 }
@@ -42,4 +42,98 @@ a {
 
 a:hover {
     color: rgb(0, 173, 181);
+}
+
+/* Ajustamos el contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner, .conteinerResult {
+    background-color: rgb(34, 40, 49);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(34, 40, 49, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+    color: rgb(238, 238, 238);
+}
+
+/* Efectos para el formulario */
+.conteiner {
+    z-index: 1;
+}
+
+.conteiner.slide-left {
+    transform: translateX(0); /* Se moverá ligeramente hacia la izquierda */
+}
+
+/* Efectos para los resultados */
+.conteinerResult {
+    z-index: 0;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.conteinerResult.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Estilos generales del formulario */
+form {
+    background-color: rgb(34, 40, 49);
+    padding: 30px 35px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#conteinerInput {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2 {
+    color: rgb(238, 238, 238);
+    font-size: 35px;
+}
+
+p, label {
+    color: rgb(238, 238, 238);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: rgb(238, 238, 238);
+    border: 2px solid rgb(238, 238, 238);
+    color: rgb(34, 40, 49);
+    outline: none;
+}
+
+input::placeholder {
+    color: rgb(0, 173, 181);
+}
+
+#boton {
+    font-size: 16px;
+    color: rgb(238, 238, 238);
+    border-radius: 25px;
+    background-color: rgb(0, 173, 181);
+    cursor: pointer;
 }
