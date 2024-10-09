@@ -69,16 +69,10 @@ a:hover {
     color: rgb(238, 238, 238);
 }
 
-/* Efectos para el formulario */
 .conteiner {
     z-index: 1;
 }
 
-.conteiner.slide-left {
-    transform: translateX(0); /* Se moverá ligeramente hacia la izquierda */
-}
-
-/* Efectos para los resultados */
 .conteinerResult {
     z-index: 0;
     opacity: 0;
@@ -90,7 +84,6 @@ a:hover {
     transform: translateX(0);
 }
 
-/* Estilos generales del formulario */
 form {
     background-color: rgb(34, 40, 49);
     padding: 30px 35px;
@@ -136,4 +129,21 @@ input::placeholder {
     border-radius: 25px;
     background-color: rgb(0, 173, 181);
     cursor: pointer;
+}
+
+.labelError {
+    display: none;
+    color: red;
+}
+
+#errorName.activo {
+    display: inline;
+}
+
+#errorEmail.activo {
+    display: inline;
+}
+
+#errorTelefono.activo {
+    display: inline;
 }

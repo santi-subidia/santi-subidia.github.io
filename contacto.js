@@ -1,20 +1,60 @@
-document.querySelector('.formulario').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevenir el envío del formulario
+//               Validación del Formulario 
 
-    // Capturar los valores del formulario
-    const name = document.getElementById('name').value;
+// Función para validar el Email
+function validarEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+// Función para validar el Teléfono
+function validarTelefono(telefono) {
+    const regex = /^[0-9\s\-\+]{7,15}$/;
+    return regex.test(telefono);
+}
+
+// Función para validar el Nombre
+function validarNombre(nombre) {
+    const regex = /^[a-zA-Z\s]+$/;
+    return regex.test(nombre);
+}
+
+function validarFormulario(event) {
+
+    event.preventDefault();
+
     const email = document.getElementById('email').value;
-    const phone = document.getElementById('telefono').value;
+    const telefono = document.getElementById('telefono').value;
+    const nombre = document.getElementById('name').value;
 
-    // Asignar los valores capturados a los spans de la pantalla de resultados
-    document.getElementById('displayName').textContent = name;
-    document.getElementById('displayEmail').textContent = email;
-    document.getElementById('displayTelefono').textContent = phone;
+    let valido = true;
 
-    // Añadir la clase para deslizar el formulario a la izquierda
-    document.querySelector('.conteiner').classList.add('slide-left');
+    if (!validarEmail(email)) {
+        document.querySelector('#errorEmail').classList.add('activo');
+        console.log("email error");
+        valido = false;
+    }
 
-    // Añadir la clase para mostrar la pantalla de resultados
-    document.querySelector('.conteinerResult').classList.add('active');
-});
+    if (!validarTelefono(telefono)) {
+        document.querySelector('#errorTelefono').classList.add('activo');
+        console.log("telefono error");
+        valido = false;
+    }
+
+    if (!validarNombre(nombre)) {
+        document.querySelector('#errorName').classList.add('activo');
+        console.log("nombre error");
+        valido = false;
+    }
+
+    if(valido == true) {
+
+        document.getElementById('displayName').textContent = nombre;
+        document.getElementById('displayEmail').textContent = email;
+        document.getElementById('displayTelefono').textContent = telefono;
+        
+        document.querySelector('.conteinerResult').classList.add('active');
+    }
+
+    return valido;
+}
 

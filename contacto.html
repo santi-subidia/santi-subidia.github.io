@@ -20,17 +20,20 @@
     </header>
     <div class="principal">
         <div class="conteiner">
-            <form class="formulario">
+            <form class="formulario" onsubmit="validarFormulario(event)">
                 <h2>Formulario de Contacto</h2>
                 <div id="conteinerInput">
                     <label for="nombre">Nombre</label>
                     <input id="name" type="text" name="nombre" placeholder="Nombre">
+                    <label id="errorName" class="labelError">Error: nombre invalido</label>
 
-                    <label for="gmail">Gmail</label>
+                    <label for="gmail">Email</label>
                     <input id="email" type="email" name="email" placeholder="Email">
+                    <label id="errorEmail" class="labelError">Error: Email invalido</label>
 
                     <label for="telefono">Telefeno</label>
                     <input id="telefono" type="tel" name="telefono" placeholder="Telefeno">
+                    <label id="errorTelefono" class="labelError">Error: Telefeno invalido</label>
 
                     <input id="boton" type="submit" value="Enviar">
 
