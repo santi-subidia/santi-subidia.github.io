@@ -1,18 +1,13 @@
-//               Validación del Formulario 
-
-// Función para validar el Email
 function validarEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
 
-// Función para validar el Teléfono
 function validarTelefono(telefono) {
-    const regex = /^[0-9\s\-\+]{7,15}$/;
+    const regex = /^[0-9\s\-\+]{10}$/;
     return regex.test(telefono);
 }
 
-// Función para validar el Nombre
 function validarNombre(nombre) {
     const regex = /^[a-zA-Z\s]+$/;
     return regex.test(nombre);
@@ -26,25 +21,27 @@ function validarFormulario(event) {
     const telefono = document.getElementById('telefono').value;
     const nombre = document.getElementById('name').value;
 
+    let errorEmail = document.getElementById('errorEmail');
+    let errorTelefono = document.getElementById('errorTelefono');
+    let errorName = document.getElementById('errorName');
+
     let valido = true;
 
     if (!validarEmail(email)) {
-        document.querySelector('#errorEmail').classList.add('activo');
-        console.log("email error");
+        errorEmail.style.display = 'block';
         valido = false;
-    }
+    } else { errorEmail.style.display = 'none'; }
+    
 
     if (!validarTelefono(telefono)) {
-        document.querySelector('#errorTelefono').classList.add('activo');
-        console.log("telefono error");
+        errorTelefono.style.display = 'block';
         valido = false;
-    }
+    } else { errorTelefono.style.display = 'none'; }
 
     if (!validarNombre(nombre)) {
-        document.querySelector('#errorName').classList.add('activo');
-        console.log("nombre error");
+        errorName.style.display = 'block';
         valido = false;
-    }
+    } else { errorName.style.display = 'none'; }
 
     if(valido == true) {
 

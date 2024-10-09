@@ -75,4 +75,17 @@ p,h2,h3 {
     justify-content: center;
 }
 
+.carrusel {
+    text-align: center;
+    border-top: 4px solid rgb(0, 173, 181);
+    margin-bottom: 20px;
+}
+
+#imgCarrusel {
+    border: 3px solid rgb(238, 238, 238);
+    margin-bottom: 20px;
+    width: 400px;
+    height: 300px;
+}
+
 

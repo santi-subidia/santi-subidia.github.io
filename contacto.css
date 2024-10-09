@@ -44,7 +44,6 @@ a:hover {
     color: rgb(0, 173, 181);
 }
 
-/* Ajustamos el contenedor principal */
 .container {
     display: flex;
     justify-content: center;
@@ -134,16 +133,4 @@ input::placeholder {
 .labelError {
     display: none;
     color: red;
-}
-
-#errorName.activo {
-    display: inline;
-}
-
-#errorEmail.activo {
-    display: inline;
-}
-
-#errorTelefono.activo {
-    display: inline;
 }
