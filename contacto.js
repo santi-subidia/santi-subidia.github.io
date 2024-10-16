@@ -43,13 +43,28 @@ function validarFormulario(event) {
         valido = false;
     } else { errorName.style.display = 'none'; }
 
+
     if(valido == true) {
 
-        document.getElementById('displayName').textContent = nombre;
-        document.getElementById('displayEmail').textContent = email;
-        document.getElementById('displayTelefono').textContent = telefono;
+        const caja = document.getElementById('caja');
+
+        caja.innerHTML = '';
+
+        const nom = document.createElement('span');
+        const ema = document.createElement('span');
+        const tel = document.createElement('span');
+
+        nom.textContent = 'Nombre: ' + nombre;
+        ema.textContent = 'Email: ' + email;
+        tel.textContent = 'Telefono: ' + telefono;
+
+        caja.appendChild(nom);
+        caja.appendChild(ema);
+        caja.appendChild(tel);
         
         document.querySelector('.conteinerResult').classList.add('active');
+
+        document.querySelector('.formulario').reset();
     }
 
     return valido;

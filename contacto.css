@@ -134,3 +134,10 @@ input::placeholder {
     display: none;
     color: red;
 }
+
+span {
+    text-align: left;
+    padding: 16px;
+    display: block;
+    font-weight: bold;
+}
